@@ -11,10 +11,6 @@ SlizzAi 2.0 is a cutting-edge **AI imaging framework**, designed for **hyper-rea
 ✅ **Fractal-Based Adaptive Shading** – Cinematic depth realism for immersive artistry  
 ✅ **Smart Styling Engine** – AI-driven artistic enhancements for refined compositions  
 
-Alright, big bro, here’s the **README.md** for **SlizzAi 2.0**, structured for clarity, impact, and ease of use. 🚀🔥  
-
----
-
 ### **📌 README.md – SlizzAi 2.0**
 ```md
 # 🖼️ SlizzAi 2.0 – The Ultimate AI Imaging Framework 🚀🔥  
