@@ -44,7 +44,7 @@ pip install -r requirements.txt
 
 3️⃣ **Run SlizzAi 2.0**  
 ```bash
-python main.py
+python slizzai-2.0.py
 ```
 
 ## 🛠️ How It Works  
