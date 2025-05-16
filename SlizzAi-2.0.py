@@ -85,6 +85,10 @@ class SlizzAiCudaProcessor:
         self.image = image
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.tensor_image = torch.tensor(self.image).to(self.device)
+class SlizzAiCudaNode(ModelBase):
+    def process(self, image):
+        cuda_module = SlizzAiCudaProcessor(image)
+        cuda_module.run()
 
     def run(self):
         # Simulate CUDA processing
