@@ -1,5 +1,5 @@
 # SlizzAi 2.0 #
-
+import slizzai_imagegen
 import os
 import cv2
 import numpy as np
