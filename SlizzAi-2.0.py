@@ -9,6 +9,76 @@ from core.dynamite_activator import DynamicDynamiteActivator
 from core.render import SlizzAiRender
 from core.cuda_processor import SlizzAiCudaProcessor
 
+import pandas as pd
+
+# Environment class from earlier integration
+class Environment:
+    def __init__(self, climate, erosion_rate, solar_power, humidity, avg_temp):
+        """
+        Parameters:
+          climate      : Name of the climate region (e.g., 'Desert', 'Temperate')
+          erosion_rate : Nominal erosion damage potential from rain and weather (0-100)
+          solar_power  : Intensity of sun damage (0-100)
+          humidity     : Relative humidity percentage (0-100)
+          avg_temp     : Average temperature in °C; deviations from a baseline boost erosion
+        """
+        self.climate = climate
+        self.erosion_rate = erosion_rate
+        self.solar_power = solar_power
+        self.humidity = humidity
+        self.avg_temp = avg_temp
+
+    def calculate_erosion_index(self):
+        # Baseline temperature for minimal thermal stress
+        baseline_temp = 15  
+        temp_factor = abs(self.avg_temp - baseline_temp)
+        # Erosion index is computed using a weighted sum:
+        erosion_index = (0.4 * self.erosion_rate +
+                         0.3 * self.solar_power +
+                         0.2 * self.humidity +
+                         0.1 * temp_factor)
+        return erosion_index
+
+    def classify_erosion(self, erosion_index):
+        if erosion_index < 30:
+            return 'Low'
+        elif erosion_index < 60:
+            return 'Moderate'
+        else:
+            return 'High'
+
+# Define the desert environment parameters:
+# Deserts experience intense solar exposure, high erosion on rocks (weathering and thermal cracking),
+# low humidity, and high temperatures. These factors yield aggressively weathered surfaces.
+desert_env = Environment(
+    climate="Desert",
+    erosion_rate=70,   # High erosion due to wind and occasional storms
+    solar_power=95,    # Extreme solar irradiation causing thermal stress and photodegradation
+    humidity=5,        # Very low humidity reduces chemical weathering but accentuates thermal fatigue
+    avg_temp=45        # High temperatures drive thermal expansion and contraction
+)
+
+# Calculate the erosion index and severity for desert rocks
+desert_ei = desert_env.calculate_erosion_index()
+desert_severity = desert_env.classify_erosion(desert_ei)
+
+# Print the desert environment simulation results
+data = {
+    "Climate": desert_env.climate,
+    "Erosion_Rate": desert_env.erosion_rate,
+    "Solar_Power": desert_env.solar_power,
+    "Humidity": desert_env.humidity,
+    "Avg_Temp": desert_env.avg_temp,
+    "Erosion_Index": round(desert_ei, 2),
+    "Severity": desert_severity
+}
+
+df = pd.DataFrame([data])
+print(df)
+
+# Optionally, this dataset can be saved for SlizzAi to reference during image generation.
+df.to_csv("desert_erosion_dataset.csv", index=False)
+
 # 🚀 Initialize SlizzAi 2.0 Framework
 image_path = "scene.jpg"
 control_arm = SlizzAiControlArm()
