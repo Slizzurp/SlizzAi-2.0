@@ -1,7 +1,7 @@
-# 🖼️ SlizzAi 2.0 – The Ultimate AI Imaging Framework 🚀🔥  
+# 🖼️ SlizzAi 2.1 – The Ultimate AI Imaging Framework 🚀🔥  
 
 ## 📌 Overview  
-SlizzAi 2.0 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**. Built with **NVIDIA OptiX integration, CUDA optimizations, and deep-learning refinement**, this tool **pushes AI-generated visuals beyond conventional limits**.  
+SlizzAi 2.1 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**. Built with **NVIDIA OptiX integration, CUDA optimizations, and deep-learning refinement**, this tool **pushes AI-generated visuals beyond conventional limits**.  
 
 ## 🚀 Key Features  
 ✅ **Hyperlinked AI Execution** – Seamless module transitions for real-time rendering  
@@ -13,10 +13,10 @@ SlizzAi 2.0 is a cutting-edge **AI imaging framework**, designed for **hyper-rea
 
 ### **📌 README.md – SlizzAi 2.0**
 ```md
-# 🖼️ SlizzAi 2.0 – The Ultimate AI Imaging Framework 🚀🔥  
+# 🖼️ SlizzAi 2.1 – The Ultimate AI Imaging Framework 🚀🔥  
 
 ## 📌 Overview  
-SlizzAi 2.0 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**. Built with **NVIDIA OptiX integration, CUDA optimizations, and deep-learning refinement**, this tool **pushes AI-generated visuals beyond conventional limits**.  
+SlizzAi 2.1 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**. Built with **NVIDIA OptiX integration, CUDA optimizations, and deep-learning refinement**, this tool **pushes AI-generated visuals beyond conventional limits**.  
 
 ## 🚀 Key Features  
 ✅ **Hyperlinked AI Execution** – Seamless module transitions for real-time rendering  
@@ -29,8 +29,8 @@ SlizzAi 2.0 is a cutting-edge **AI imaging framework**, designed for **hyper-rea
 ## ⚡ Installation & Setup  
 1️⃣ **Clone the Repository**  
 ```bash
-git clone https://github.com/Slizzurp/SlizzAi-2.0.git
-cd SlizzAi-2.0
+git clone https://github.com/Slizzurp/SlizzAi-2.1.git
+cd SlizzAi-2.1
 ```
 
 2️⃣ **Install Dependencies**  
@@ -38,9 +38,9 @@ cd SlizzAi-2.0
 pip install -r requirements.txt
 ```
 
-3️⃣ **Run SlizzAi 2.0**  
+3️⃣ **Run SlizzAi 2.1**  
 ```bash
-python slizzai-2.0.py
+python slizzai-2.1.py
 ```
 
 ## 🛠️ How It Works  
@@ -60,7 +60,7 @@ python slizzai-2.0.py
 ✔ **Expanded Smart Styling Algorithms**  
 
 ## 🔗 License & Credits  
-SlizzAi 2.0 is **MIT licensed**, designed for **AI research and creative development**.  
+SlizzAi 2.1 is **MIT licensed**, designed for **AI research and creative development**.  
 © 2025 SlizzAi Team – [GitHub Repository](https://github.com/Slizzurp/SlizzAi-2.0)  
 
 🔥 **Welcome to the future of AI imaging!** 🚀  
