@@ -9,6 +9,282 @@ from core.dynamite_activator import DynamicDynamiteActivator
 from core.render import SlizzAiRender
 from core.cuda_processor import SlizzAiCudaProcessor
 
+#!/usr/bin/env python3
+"""
+Forest Ecosystem Simulation Module for SlizzAi-2.0
+
+This module models the forest floor environment by incorporating comprehensive
+data and processing instructions for plants, foliage, soil, water, ground matter,
+and debris (sticks, rocks, small leaves). The simulation is designed with an AI
+context in mind, allowing iterative refinements and environmental updates across
+a grid-based landscape.
+"""
+
+import random
+
+# ----------------------------
+# Core Classes for Ecosystem Elements
+# ----------------------------
+
+class ForestElement:
+    """Base class for all elements present in the forest ecosystem."""
+    def __init__(self, name: str, position: tuple):
+        self.name = name
+        self.position = position
+
+    def update(self, environment):
+        """Override in subclasses to define update behavior."""
+        pass
+
+class Plant(ForestElement):
+    """
+    Represents a plant (e.g., trees, bushes) whose growth depends on sunlight,
+    water availability, and soil quality.
+    """
+    def __init__(self, species: str, position: tuple, age: int = 0, height: float = 0.1, health: float = 1.0):
+        super().__init__(species, position)
+        self.age = age
+        self.height = height
+        self.health = health
+
+    def grow(self, sunlight: float, water: float, soil_quality: float):
+        growth_factor = sunlight * water * soil_quality
+        self.height += 0.1 * growth_factor  # Simplistic growth model
+        self.age += 1
+        if self.height > 10:
+            self.health = min(self.health + 0.05, 1.0)
+        else:
+            self.health = max(self.health - 0.02, 0)
+
+    def update(self, environment):
+        sunlight = environment.get_sunlight(self.position)
+        water = environment.get_water_availability(self.position)
+        soil_quality = environment.get_soil_quality(self.position)
+        self.grow(sunlight, water, soil_quality)
+        return self
+
+class Foliage(ForestElement):
+    """
+    Represents the leafy component of plants. Its density can change based on seasonality and light.
+    """
+    def __init__(self, density: float, color: str, position: tuple):
+        super().__init__("Leaf", position)
+        self.density = density
+        self.color = color
+
+    def update(self, environment):
+        # Seasonal variation: density can decay or intensify depending on the season factor.
+        season_factor = environment.get_season_factor()
+        self.density *= season_factor
+        return self
+
+class Debris(ForestElement):
+    """
+    Represents debris objects like sticks, rocks, or small leaves found on the forest floor.
+    These elements have a decay process to simulate natural decomposition.
+    """
+    def __init__(self, debris_type: str, position: tuple, decay_rate: float = 0.01):
+        super().__init__(debris_type, position)
+        self.decay_level = 1.0  # 1.0 indicates untouched state; decays toward 0
+        self.decay_rate = decay_rate
+
+    def update(self, environment):
+        self.decay_level = max(self.decay_level - self.decay_rate, 0)
+        return self
+
+# ----------------------------
+# Non-Forest Element Classes
+# ----------------------------
+
+class Soil:
+    """
+    Encapsulates soil properties influencing plant growth: moisture, nutrient level, and pH.
+    """
+    def __init__(self, moisture: float, nutrient_level: float, pH: float):
+        self.moisture = moisture
+        self.nutrient_level = nutrient_level
+        self.pH = pH
+
+    def update(self, water_absorption: float, organic_decay: float):
+        self.moisture = max(min(self.moisture + water_absorption - 0.01, 1.0), 0)
+        self.nutrient_level = max(min(self.nutrient_level + organic_decay - 0.005, 1.0), 0)
+
+class Water:
+    """
+    Represents water bodies or puddles. Simulates evaporation based on temperature.
+    """
+    def __init__(self, position: tuple, volume: float):
+        self.position = position
+        self.volume = volume
+
+    def evaporate(self, temperature: float):
+        evaporation_rate = temperature / 1000.0
+        self.volume = max(self.volume - evaporation_rate, 0)
+
+    def update(self, environment):
+        temperature = environment.get_temperature(self.position)
+        self.evaporate(temperature)
+
+class GroundMatter:
+    """
+    Aggregates multiple debris objects on the forest floor.
+    """
+    def __init__(self, debris_list=None):
+        self.debris_list = debris_list if debris_list is not None else []
+
+    def add_debris(self, debris: Debris):
+        self.debris_list.append(debris)
+
+    def update(self, environment):
+        self.debris_list = [piece.update(environment) for piece in self.debris_list]
+
+# ----------------------------
+# Environmental Model and Ecosystem Management
+# ----------------------------
+
+class ForestEnvironment:
+    """
+    Models the environmental grid and parameters that influence forest elements.
+    This includes soil quality, temperature, and sunlight on a per-grid basis.
+    """
+    def __init__(self, width: int, height: int):
+        self.width = width
+        self.height = height
+        self.soil_grid = [
+            [Soil(random.uniform(0.3, 0.7), random.uniform(0.2, 0.6), random.uniform(5.5, 7.5))
+             for _ in range(width)]
+            for _ in range(height)
+        ]
+        self.temperature_grid = [
+            [random.uniform(15, 25) for _ in range(width)]
+            for _ in range(height)
+        ]
+        self.season_factor = 0.98  # Default seasonal factor; can be adjusted per season
+
+    def get_soil(self, position: tuple) -> Soil:
+        x, y = position
+        return self.soil_grid[y][x]
+
+    def get_soil_quality(self, position: tuple) -> float:
+        soil = self.get_soil(position)
+        # Calculate quality based on moisture, nutrients, and proximity to pH optimum (6.5)
+        pH_factor = max(0, 1 - abs(soil.pH - 6.5) / 10)
+        quality = ((soil.moisture + soil.nutrient_level) / 2.0) * pH_factor
+        return quality
+
+    def get_sunlight(self, position: tuple) -> float:
+        # In a full implementation, this might depend on canopy density.
+        return random.uniform(0.5, 1.0)
+
+    def get_water_availability(self, position: tuple) -> float:
+        soil = self.get_soil(position)
+        return soil.moisture
+
+    def get_temperature(self, position: tuple) -> float:
+        x, y = position
+        return self.temperature_grid[y][x]
+
+    def get_season_factor(self) -> float:
+        return self.season_factor
+
+    def update(self):
+        # Simulate environmental events (e.g., random rain events affecting soil moisture)
+        for y in range(self.height):
+            for x in range(self.width):
+                rain = random.uniform(0, 0.05)
+                self.soil_grid[y][x].moisture = min(self.soil_grid[y][x].moisture + rain, 1.0)
+                self.temperature_grid[y][x] = max(self.temperature_grid[y][x] - rain * 5, 10)
+
+class ForestEcosystem:
+    """
+    The integrated simulation system. This class orchestrates updates for all elements,
+    thereby replicating the interactions between the biological and non-biological components.
+    """
+    def __init__(self, width: int = 10, height: int = 10):
+        self.environment = ForestEnvironment(width, height)
+        self.plants = []
+        self.foliage = []
+        self.water_bodies = []
+        self.ground_matter = GroundMatter()
+
+    def add_plant(self, plant: Plant):
+        self.plants.append(plant)
+
+    def add_foliage(self, foliage: Foliage):
+        self.foliage.append(foliage)
+
+    def add_water_body(self, water: Water):
+        self.water_bodies.append(water)
+
+    def add_debris(self, debris: Debris):
+        self.ground_matter.add_debris(debris)
+
+    def simulate_step(self):
+        # Update environmental conditions first.
+        self.environment.update()
+
+        # Update all living elements.
+        for plant in self.plants:
+            plant.update(self.environment)
+        for leaf in self.foliage:
+            leaf.update(self.environment)
+        for water in self.water_bodies:
+            water.update(self.environment)
+        self.ground_matter.update(self.environment)
+
+    def report_status(self):
+        """Utility function to print current status for each element type."""
+        print("Plants:")
+        for plant in self.plants:
+            print(f"  {plant.name} at {plant.position} - Height: {plant.height:.2f}, Age: {plant.age}, Health: {plant.health:.2f}")
+        print("Foliage:")
+        for leaf in self.foliage:
+            print(f"  {leaf.name} at {leaf.position} - Density: {leaf.density:.2f}")
+        print("Water Bodies:")
+        for idx, water in enumerate(self.water_bodies):
+            print(f"  Water Body {idx} at {water.position} - Volume: {water.volume:.2f}")
+        print("Debris (Ground Matter):")
+        for debris in self.ground_matter.debris_list:
+            print(f"  {debris.name} at {debris.position} - Decay Level: {debris.decay_level:.2f}")
+        print("\n")
+
+    def run_simulation(self, steps: int = 10):
+        for step in range(steps):
+            print(f"Simulation Step: {step + 1}")
+            self.simulate_step()
+            self.report_status()
+
+# ----------------------------
+# Application Aspect: Entry Point for Integration
+# ----------------------------
+if __name__ == "__main__":
+    # Instantiate the ecosystem with a small grid
+    ecosystem = ForestEcosystem(width=5, height=5)
+
+    # Add sample plants at random grid positions
+    for _ in range(5):
+        position = (random.randint(0, 4), random.randint(0, 4))
+        ecosystem.add_plant(Plant("Oak", position))
+
+    # Integrate some foliage elements
+    for _ in range(3):
+        position = (random.randint(0, 4), random.randint(0, 4))
+        ecosystem.add_foliage(Foliage(density=random.uniform(0.5, 1.0), color="green", position=position))
+
+    # Place water bodies in the grid
+    for _ in range(2):
+        position = (random.randint(0, 4), random.randint(0, 4))
+        ecosystem.add_water_body(Water(position, volume=random.uniform(10, 20)))
+
+    # Scatter debris objects across the forest floor
+    debris_types = ["Stick", "Rock", "Leaf"]
+    for _ in range(4):
+        position = (random.randint(0, 4), random.randint(0, 4))
+        ecosystem.add_debris(Debris(random.choice(debris_types), position))
+
+    # Run simulation for a specified number of steps
+    ecosystem.run_simulation(steps=10)
+
 import pandas as pd
 
 # Environment class from earlier integration
