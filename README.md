@@ -5,7 +5,7 @@ SlizzAi 2.1 is a cutting-edge **AI imaging framework**, designed for **hyper-rea
 
 """
 SlizzAi-2.1.py - Version 2.1
-Release Date: [Insert Date]
+Release Date: 5/21/25
 This module integrates the advanced forest ecosystem simulation component,
 refining plant growth, foliage, soil moisture, water bodies, and debris dynamics.
 """
