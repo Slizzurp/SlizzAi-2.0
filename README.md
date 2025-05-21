@@ -3,6 +3,13 @@
 ## 📌 Overview  
 SlizzAi 2.1 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**. Built with **NVIDIA OptiX integration, CUDA optimizations, and deep-learning refinement**, this tool **pushes AI-generated visuals beyond conventional limits**.  
 
+"""
+SlizzAi-2.1.py - Version 2.1
+Release Date: [Insert Date]
+This module integrates the advanced forest ecosystem simulation component,
+refining plant growth, foliage, soil moisture, water bodies, and debris dynamics.
+"""
+
 ## 🚀 Key Features  
 ✅ **Hyperlinked AI Execution** – Seamless module transitions for real-time rendering  
 ✅ **Dynamic Dynamite Activator** – Instant code bursting for rapid function execution  
