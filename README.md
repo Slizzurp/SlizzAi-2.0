@@ -1,10 +1,10 @@
-# 🖼️ SlizzAi 2.2 – The Ultimate AI Imaging Framework 🚀🔥  
+# 🖼️ SlizzAi 2.3 – The Ultimate AI Imaging Framework 🚀🔥  
 
 ## 📌 Overview  
-SlizzAi 2.2 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**. Built with **NVIDIA OptiX integration, CUDA optimizations, and deep-learning refinement**, this tool **pushes AI-generated visuals beyond conventional limits**.  
+SlizzAi 2.3 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**. Built with **NVIDIA OptiX integration, CUDA optimizations, and deep-learning refinement**, this tool **pushes AI-generated visuals beyond conventional limits**.  
 
 """
-SlizzAi-2.2.py - Version 2.2
+SlizzAi-2.3.py - Version 2.3
 Release Date: 5/23/25
 This module integrates the advanced forest ecosystem simulation component,
 refining plant growth, foliage, soil moisture, water bodies, and debris dynamics.
@@ -20,13 +20,13 @@ refining plant growth, foliage, soil moisture, water bodies, and debris dynamics
 
 ### **📌 README.md – SlizzAi 2.0**
 ```md
-# 🖼️ SlizzAi 2.2 – The Ultimate AI Imaging Framework 🚀🔥  
+# 🖼️ SlizzAi 2.3 – The Ultimate AI Imaging Framework 🚀🔥  
 
 ## 📌 Overview  
-SlizzAi 2.2 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**. Built with **NVIDIA OptiX integration, CUDA optimizations, and deep-learning refinement**, this tool **pushes AI-generated visuals beyond conventional limits**.  
+SlizzAi 2.3 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**. Built with **NVIDIA OptiX integration, CUDA optimizations, and deep-learning refinement**, this tool **pushes AI-generated visuals beyond conventional limits**.  
 
 #### **Update Summary**
-SlizzAi 2.2 introduces **Quantum Rendering Enhancements**, incorporating **M-Theory principles, string physics adaptations, and neural efficiency models** for **ultra-realistic character rendering**. This version refines **lighting physics, reflections, and adaptive shading**, leveraging **quantum energy balance** to create **richly detailed characters with dynamic depth**.
+SlizzAi 2.3 introduces **Quantum Rendering Enhancements**, incorporating **M-Theory principles, string physics adaptations, and neural efficiency models** for **ultra-realistic character rendering**. This version refines **lighting physics, reflections, and adaptive shading**, leveraging **quantum energy balance** to create **richly detailed characters with dynamic depth**.
 
 ---
 ### **🔹 Key Enhancements in SlizzAi 2.2**
@@ -47,8 +47,8 @@ SlizzAi 2.2 introduces **Quantum Rendering Enhancements**, incorporating **M-The
 ## ⚡ Installation & Setup  
 1️⃣ **Clone the Repository**  
 ```bash
-git clone https://github.com/Slizzurp/SlizzAi-2.2.git
-cd SlizzAi-2.2
+git clone https://github.com/Slizzurp/SlizzAi-2.3.git
+cd SlizzAi-2.3
 ```
 
 2️⃣ **Install Dependencies**  
@@ -56,9 +56,9 @@ cd SlizzAi-2.2
 pip install -r requirements.txt
 ```
 
-3️⃣ **Run SlizzAi 2.2**  
+3️⃣ **Run SlizzAi 2.3**  
 ```bash
-python slizzai-2.2.py
+python slizzai-2.3.py
 ```
 
 ## 🛠️ How It Works  
@@ -78,7 +78,7 @@ python slizzai-2.2.py
 ✔ **Expanded Smart Styling Algorithms**  
 
 ## 🔗 License & Credits  
-SlizzAi 2.2 is **MIT licensed**, designed for **AI research and creative development**.  
-© 2025 SlizzAi Team – [GitHub Repository](https://github.com/Slizzurp/SlizzAi-2.2)  
+SlizzAi 2.3 is **MIT licensed**, designed for **AI research and creative development**.  
+© 2025 SlizzAi Team – [GitHub Repository](https://github.com/Slizzurp/SlizzAi-2.3)  
 
 🔥 **Welcome to the future of AI imaging!** 🚀  
