@@ -1,6 +1,6 @@
-# SlizzAi 2.2 #
-import slizzai_imagegen
+# SlizzAi 2.3 #
 import os
+import time
 import cv2
 import numpy as np
 import torch
@@ -17,16 +17,63 @@ import pycuda.driver as cuda
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
-
-import numpy as np
-import cv2
-import torch
-import pycuda.autoinit
-import pycuda.driver as cuda
 from PIL import Image
-from OpenGL.GL import *
-from OpenGL.GLUT import *
-from OpenGL.GLU import *
+import slizzai_imagegen
+from slizzai_imagegen import ImageProcessor  # SlizzAi-ImageGen Module
+
+class SlizzAiLSS:
+    def __init__(self):
+        self.rain_intensity = 0.5  # Adaptive Rain Simulation
+        self.surface_temperature = 22.5  # Celsius
+        self.wetness_map = np.zeros((128, 128))  # Wetness tracking grid
+        self.image_processor = ImageProcessor()  # Load SlizzAi-ImageGen module
+
+    def update_rainfall(self):
+        """Dynamically adjust wetness based on rain intensity."""
+        rain_factor = np.random.uniform(0.3, 1.0) * self.rain_intensity
+        self.wetness_map += rain_factor * np.random.rand(128, 128)
+        self.wetness_map = np.clip(self.wetness_map, 0, 1)
+
+    def process_image(self, image_path, prompt):
+        """Use SlizzAi-ImageGen for wet texture rendering based on user request."""
+        if self.analyze_prompt(prompt):
+            return self.image_processor.enhance_wet_textures(image_path)
+        return self.image_processor.default_process(image_path)
+
+    def adjust_visibility(self):
+        """Enhance wetness visibility using thermal mapping."""
+        thermal_map = self.wetness_map * 255
+        return thermal_map
+
+    def analyze_prompt(self, prompt):
+        """Refined prompt detection for Latin-based language processing."""
+        key_terms = ["rain", "wet", "storm", "water", "humidity"]
+        return any(term in prompt.lower() for term in key_terms)
+
+    def update_environment(self, prompt):
+        """Adaptive processing based on prompt understanding."""
+        if self.analyze_prompt(prompt):
+            self.update_rainfall()
+
+# Rendering Loop for Adaptive Wetness
+def render_scene():
+    env = SlizzAiLSS()
+    
+    while True:
+        gl.glClear(gl.GL_COLOR_BUFFER_BIT | gl.GL_DEPTH_BUFFER_BIT)
+        
+        user_prompt = "Generate a stormy battlefield scene"  # Example prompt
+        env.update_environment(user_prompt)
+
+        wetness_visual = env.adjust_visibility()
+        processed_image = env.process_image("scene.jpg", user_prompt)  # Image enhancement
+
+        print(f"Wetness Level: {np.mean(env.wetness_map):.3f}, Processed Image: {processed_image}")
+        
+        time.sleep(0.1)  # Simulated real-time update delay
+
+# Execute script update
+render_scene()
 
 # Initialize GPU-based ray-tracing (OptiX simulation placeholder)
 def gpu_ray_trace(input_image, light_position):
@@ -594,10 +641,10 @@ if __name__ == "__main__":
         cv2.destroyAllWindows()
         print("Cleanup complete. Exiting...")
         exit(0)
-# SlizzAi 2.2 - The Ultimate AI Framework for Image Processing and Control Arm Operations
+# SlizzAi 2.3 - The Ultimate AI Framework for Image Processing and Prompted Operations
 # 🚀
 # Developed by SlizzAi Team
-# Version 2.2 - Enhanced Features and Performance
+# Version 2.3 - Enhanced Features and Performance
 # License: MIT
 # © 2025 SlizzAi Team. All rights reserved.
 # For more information, visit https://github.com/Slizzurp/SlizzAi
