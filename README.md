@@ -87,6 +87,6 @@ python slizzai-2.3.py
 
 ## 🔗 License & Credits  
 SlizzAi 2.3 is **MIT licensed**, designed for **AI research and creative development**.  
-© 2025 SlizzAi Team – [GitHub Repository](https://github.com/Slizzurp/SlizzAi-2.3)  
+© 2025 SlizzAi Team – [GitHub Repository](https://github.com/Slizzurp/SlizzAi-2.0)  
 
 🔥 **Welcome to the future of AI imaging!** 🚀  
