@@ -20,6 +20,80 @@ from OpenGL.GLU import *
 from PIL import Image
 import slizzai_imagegen
 from slizzai_imagegen import ImageProcessor  # SlizzAi-ImageGen Module
+from PIL import Image, ImageEnhance, ImageDraw
+
+### COLOR & DEPTH ENHANCEMENTS ###
+def enhance_image_depth(image_path):
+    image = cv2.imread(image_path)
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    depth_map = cv2.equalizeHist(gray)
+    return cv2.applyColorMap(depth_map, cv2.COLORMAP_JET)
+
+def adjust_hue(image_path, hue_factor=1.2):
+    image = Image.open(image_path).convert("RGB")
+    return ImageEnhance.Color(image).enhance(hue_factor)
+
+def amplify_contrast(image_path, contrast_factor=1.5):
+    image = Image.open(image_path).convert("RGB")
+    return ImageEnhance.Contrast(image).enhance(contrast_factor)
+
+def apply_soft_bloom(image_path, intensity=0.3):
+    image = cv2.imread(image_path)
+    blurred = cv2.GaussianBlur(image, (15, 15), 0)
+    return cv2.addWeighted(image, 1 - intensity, blurred, intensity, 0)
+
+def microcontrast_refinement(image_path):
+    image = cv2.imread(image_path)
+    lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
+    l, a, b = cv2.split(lab)
+    l = cv2.equalizeHist(l)
+    return cv2.cvtColor(cv2.merge([l, a, b]), cv2.COLOR_LAB2BGR)
+
+### GRAPHICAL & ABSTRACT DESIGN TOOLS ###
+def generate_graffiti_overlay(image_path):
+    image = Image.open(image_path).convert("RGBA")
+    overlay = Image.new("RGBA", image.size, (255, 255, 255, 0))
+    draw = ImageDraw.Draw(overlay)
+    for _ in range(30):
+        x1, y1, x2, y2 = np.random.randint(0, image.width, 2), np.random.randint(0, image.height, 2)
+        draw.line([x1, y1, x2, y2], fill=tuple(np.random.randint(0, 255, 3)), width=3)
+    return Image.alpha_composite(image, overlay)
+
+def procedural_shapes_overlay(image_path):
+    image = Image.open(image_path).convert("RGBA")
+    overlay = Image.new("RGBA", image.size, (255, 255, 255, 0))
+    draw = ImageDraw.Draw(overlay)
+    for _ in range(15):
+        x, y, size = np.random.randint(0, image.width), np.random.randint(0, image.height), np.random.randint(20, 80)
+        draw.ellipse([x, y, x + size, y + size], fill=tuple(np.random.randint(0, 255, 3)), outline=(255, 255, 255))
+    return Image.alpha_composite(image, overlay)
+
+def apply_motion_blur(image_path, kernel_size=15):
+    image = cv2.imread(image_path)
+    k = np.zeros((kernel_size, kernel_size))
+    k[:, kernel_size // 2] = np.ones(kernel_size) / kernel_size
+    return cv2.filter2D(image, -1, k)
+
+def generate_fractal_background(image_size=(512, 512)):
+    fractal = np.zeros(image_size, dtype=np.uint8)
+    for i in range(image_size[0]):
+        for j in range(image_size[1]):
+            fractal[i, j] = (i * j) % 255
+    return Image.fromarray(fractal)
+
+### EXAMPLE USAGE ###
+image_path = "input.jpg"
+
+cv2.imwrite("depth_enhanced.jpg", enhance_image_depth(image_path))
+adjust_hue(image_path).save("hue_adjusted.jpg")
+amplify_contrast(image_path).save("contrast_amplified.jpg")
+cv2.imwrite("soft_bloom.jpg", apply_soft_bloom(image_path))
+cv2.imwrite("microcontrast.jpg", microcontrast_refinement(image_path))
+
+generate_graffiti_overlay(image_path).save("graffiti_overlay.jpg")
+procedural_shapes_overlay(image_path).save("shapes_overlay.jpg")
+cv2.imwrite("motion_blur.jpg", apply_motion_blur(image_path))
+generate_fractal_background().save("fractal_background.jpg")
 
 class SlizzAiLSS:
     def __init__(self):
