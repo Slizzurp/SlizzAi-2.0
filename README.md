@@ -3,7 +3,6 @@
 ## 📌 Overview  
 SlizzAi 2.4 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**. Built with **NVIDIA OptiX integration, CUDA optimizations, and deep-learning refinement**, this tool **pushes AI-generated visuals beyond conventional limits**.  
 
-"""
 SlizzAi-2.4.py - Version 2.4
 Release Date: 5/28/25
 This module integrates the advanced forest ecosystem simulation component,
