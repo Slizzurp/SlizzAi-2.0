@@ -1,10 +1,10 @@
-# 🖼️ SlizzAi 2.3 – The Ultimate AI Imaging Framework 🚀🔥  
+# 🖼️ SlizzAi 2.4 – The Ultimate AI Imaging Framework 🚀🔥  
 
 ## 📌 Overview  
-SlizzAi 2.3 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**. Built with **NVIDIA OptiX integration, CUDA optimizations, and deep-learning refinement**, this tool **pushes AI-generated visuals beyond conventional limits**.  
+SlizzAi 2.4 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**. Built with **NVIDIA OptiX integration, CUDA optimizations, and deep-learning refinement**, this tool **pushes AI-generated visuals beyond conventional limits**.  
 
 """
-SlizzAi-2.3.py - Version 2.3
+SlizzAi-2.4.py - Version 2.4
 Release Date: 5/28/25
 This module integrates the advanced forest ecosystem simulation component,
 refining plant growth, foliage, soil moisture, water bodies, and debris dynamics.
@@ -31,7 +31,7 @@ Update 2.2 included the following:
 # 🖼️ Current update: SlizzAi 2.3 – The Ultimate AI Imaging Framework 🚀🔥  
 
 ## 📌 Overview  
-SlizzAi 2.3 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**. Built with **NVIDIA OptiX integration, CUDA optimizations, and deep-learning refinement**, this tool **pushes AI-generated visuals beyond conventional limits**.  
+SlizzAi 2.4 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**. Built with **NVIDIA OptiX integration, CUDA optimizations, and deep-learning refinement**, this tool **pushes AI-generated visuals beyond conventional limits**.  
 
 #### **Update Summary for update v2.3**
 SlizzAi-2.3 L.S.S. (Liquid Solubility System) introduces **advanced water rendering, real-time wetness adaptation, and intelligent prompt comprehension**, integrating **SlizzAi-ImageGen** for **enhanced rain, wet skin, and fluid texture processing**. This update refines **reflection, refraction, and adaptive wet surface rendering**, ensuring **hyper-realistic environmental effects** in response to **water-based prompts**. Additionally, SlizzAi now features **optimized Latin-language processing**, improving **text-based prompt recognition** for natural language comprehension. With faster **image enhancement**, **thermal wetness visibility**, and **dynamic fluid interactions**, SlizzAi-2.3 sets **a new benchmark for ultra-realistic, AI-driven scene generation**.
@@ -55,8 +55,8 @@ SlizzAi-2.3 L.S.S. (Liquid Solubility System) introduces **advanced water render
 ## ⚡ Installation & Setup  
 1️⃣ **Clone the Repository**  
 ```bash
-git clone https://github.com/Slizzurp/SlizzAi-2.3.git
-cd SlizzAi-2.3
+git clone https://github.com/Slizzurp/SlizzAi-2.4.git
+cd SlizzAi-2.4
 ```
 
 2️⃣ **Install Dependencies**  
@@ -64,9 +64,9 @@ cd SlizzAi-2.3
 pip install -r requirements.txt
 ```
 
-3️⃣ **Run SlizzAi 2.3**  
+3️⃣ **Run SlizzAi 2.4**  
 ```bash
-python slizzai-2.3.py
+python slizzai-2.4.py
 ```
 
 ## 🛠️ How It Works  
@@ -86,7 +86,7 @@ python slizzai-2.3.py
 ✔ **Expanded Smart Styling Algorithms**  
 
 ## 🔗 License & Credits  
-SlizzAi 2.3 is **MIT licensed**, designed for **AI research and creative development**.  
+SlizzAi 2.4 is **MIT licensed**, designed for **AI research and creative development**.  
 © 2025 SlizzAi Team – [GitHub Repository](https://github.com/Slizzurp/SlizzAi-2.0)  
 
 🔥 **Welcome to the future of AI imaging!** 🚀  
