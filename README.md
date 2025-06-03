@@ -35,12 +35,22 @@ Update 2.2 included the following:
 ✅ **Fractal-Based Adaptive Shading** – Cinematic depth realism for immersive artistry  
 ✅ **Smart Styling Engine** – AI-driven artistic enhancements for refined compositions  
 
-### **📌 README.md – SlizzAi 2.0**
+### **📌 README.md – SlizzAi 2.4**
 ```md
-# 🖼️ Current update: SlizzAi 2.3 – The Ultimate AI Imaging Framework 🚀🔥  
+# 🖼️ Current update: SlizzAi 2.4 – The Ultimate AI Imaging Framework 🚀🔥  
 
 ## 📌 Overview  
 SlizzAi 2.4 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**. Built with **NVIDIA OptiX integration, CUDA optimizations, and deep-learning refinement**, this tool **pushes AI-generated visuals beyond conventional limits**.  
+
+### **Update Notes for SlizzAi v2.4**
+- **Advanced Depth Mapping** – Enhanced **histogram-based shading for realistic depth refinement**.
+- **Cinematic Bloom & Adaptive Contrast** – **Soft glow & fine-tuned contrast boosts for hyper-realism**.
+- **Motion Blur Vectorization** – **Dynamic directional blur for action-driven compositions**.
+- **Fractal Flow Dynamics** – **Mathematical fractal backgrounds for abstract fantasy themes**.
+- **Texture Mapping & Grain Overlay** – **Paper-like textures and realistic surface effects**.
+- **Procedural Graffiti & Shape Placement** – **Adaptive design elements floating around the subject**.
+- **AI-Based Luminescence Harmonization** – **Intelligent ambient lighting balance**.
+
 
 #### **Update Summary for update v2.3**
 SlizzAi-2.3 L.S.S. (Liquid Solubility System) introduces **advanced water rendering, real-time wetness adaptation, and intelligent prompt comprehension**, integrating **SlizzAi-ImageGen** for **enhanced rain, wet skin, and fluid texture processing**. This update refines **reflection, refraction, and adaptive wet surface rendering**, ensuring **hyper-realistic environmental effects** in response to **water-based prompts**. Additionally, SlizzAi now features **optimized Latin-language processing**, improving **text-based prompt recognition** for natural language comprehension. With faster **image enhancement**, **thermal wetness visibility**, and **dynamic fluid interactions**, SlizzAi-2.3 sets **a new benchmark for ultra-realistic, AI-driven scene generation**.
