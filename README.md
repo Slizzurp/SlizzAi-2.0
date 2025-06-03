@@ -10,6 +10,16 @@ This module integrates the advanced forest ecosystem simulation component,
 refining plant growth, foliage, soil moisture, water bodies, and debris dynamics.
 """
 
+### **Update Notes for SlizzAi v2.4**
+#### **New Features & Enhancements**
+- **Advanced Depth Mapping** – Enhanced **histogram-based shading for realistic depth refinement**.
+- **Cinematic Bloom & Adaptive Contrast** – **Soft glow & fine-tuned contrast boosts for hyper-realism**.
+- **Motion Blur Vectorization** – **Dynamic directional blur for action-driven compositions**.
+- **Fractal Flow Dynamics** – **Mathematical fractal backgrounds for abstract fantasy themes**.
+- **Texture Mapping & Grain Overlay** – **Paper-like textures and realistic surface effects**.
+- **Procedural Graffiti & Shape Placement** – **Adaptive design elements floating around the subject**.
+- **AI-Based Luminescence Harmonization** – **Intelligent ambient lighting balance**.
+
 ### **Update Notes for SlizzAi-2.3 L.S.S.**
 🚀 **SlizzAi-ImageGen Integration** → Advanced **rain, wet skin, and fluid textures** processed dynamically.  
 💡 **Adaptive Prompt Recognition** → **Latin-based text model refinement** ensures better **prompt comprehension**.  
