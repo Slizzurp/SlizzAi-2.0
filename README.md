@@ -114,8 +114,38 @@ cd SlizzAi-2.5
 
 2️⃣ **Install Dependencies**  
 ```bash
-pip install -r requirements.txt
-```
+Here’s a streamlined installation guide for **SlizzAi v2.5** dependencies:  
+
+### 🔧 **Installation Guide**  
+
+1️⃣ **Ensure Python 3.10+ is installed:**  
+   ```bash
+   python --version
+   ```
+
+2️⃣ **Set up a virtual environment:**  
+   ```bash
+   python -m venv slizzai_env  
+   source slizzai_env/bin/activate  # Mac/Linux  
+   slizzai_env\Scripts\activate  # Windows  
+   ```
+
+3️⃣ **Install core dependencies:**  
+   ```bash
+   pip install -r requirements.txt  
+   ```
+
+4️⃣ **Install CUDA for GPU acceleration:**  
+   - Follow [NVIDIA CUDA Toolkit](https://developer.nvidia.com/cuda-download)  
+
+5️⃣ **Set up OptiX AI Refinement:**  
+   - Install [OptiX SDK](https://developer.nvidia.com/optix)  
+   - Ensure compatibility with your GPU  
+
+6️⃣ **Verify SlizzAi integrity:**  
+   ```bash
+   python slizzai_test.py  
+   ```
 
 3️⃣ **Run SlizzAi 2.5**  
 ```bash
