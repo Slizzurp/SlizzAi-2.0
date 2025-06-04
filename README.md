@@ -79,7 +79,15 @@ Additional enhancements—such as subpixel chromatic detailing, edge smoothening
 
 
 #### **Update Summary for update v2.3**
-SlizzAi-2.3 L.S.S. (Liquid Solubility System) introduces **advanced water rendering, real-time wetness adaptation, and intelligent prompt comprehension**, integrating **SlizzAi-ImageGen** for **enhanced rain, wet skin, and fluid texture processing**. This update refines **reflection, refraction, and adaptive wet surface rendering**, ensuring **hyper-realistic environmental effects** in response to **water-based prompts**. Additionally, SlizzAi now features **optimized Latin-language processing**, improving **text-based prompt recognition** for natural language comprehension. With faster **image enhancement**, **thermal wetness visibility**, and **dynamic fluid interactions**, SlizzAi-2.3 sets **a new benchmark for ultra-realistic, AI-driven scene generation**.
+SlizzAi-2.3 L.S.S. (Liquid Solubility System) introduces
+**advanced water rendering, real-time wetness adaptation, and intelligent prompt comprehension**,
+integrating **SlizzAi-ImageGen**for **enhanced rain, wet skin, and fluid texture processing**.
+This update refines **reflection, refraction, and adaptive wet surface rendering**, ensuring
+ **hyper-realistic environmental effects** in response to **water-based prompts**.
+Additionally, SlizzAi now features
+**optimized Latin-language processing**, improving **text-based prompt recognition**
+for natural language comprehension. With faster **image enhancement**, **thermal wetness visibility**, and **dynamic fluid interactions**,
+SlizzAi-2.3 sets **a new benchmark for ultra-realistic, AI-driven scene generation**.
 
 ---
 ### **🔹 Key Enhancements in SlizzAi 2.2**
