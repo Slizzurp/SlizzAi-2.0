@@ -106,13 +106,13 @@ SlizzAi-2.3 sets **a new benchmark for ultra-realistic, AI-driven scene generati
 ✅ **Smart Styling Engine** – AI-driven artistic enhancements for refined compositions  
 
 ## ⚡ Installation & Setup  
-1️⃣ **Clone the Repository**  
+ **Clone the Repository**  
 ```bash
 git clone https://github.com/Slizzurp/SlizzAi-2.5.git
 cd SlizzAi-2.5
 ```
 
-2️⃣ **Install Dependencies**  
+2️ **Install Dependencies**  
 ```bash
 Here’s a streamlined installation guide for **SlizzAi v2.5** dependencies:  
 
@@ -147,7 +147,7 @@ Here’s a streamlined installation guide for **SlizzAi v2.5** dependencies:
    python slizzai_test.py  
    ```
 
-3️⃣ **Run SlizzAi 2.5**  
+🚀 **Run SlizzAi 2.5**  
 ```bash
 python slizzai-2.5.py
 ```
