@@ -5,9 +5,7 @@ SlizzAi 2.5 is a cutting-edge **AI imaging framework**, designed for **hyper-rea
 
 SlizzAi-2.5.py - Version 2.5
 Release Date: 6/3/25
-This module integrates the advanced forest ecosystem simulation component,
-refining plant growth, foliage, soil moisture, water bodies, and debris dynamics.
-"""
+
 ### **SlizzAi v2.5 Update Note**
 Our latest update for SlizzAi v2.5 introduces a groundbreaking suite of enhancements aimed at virtually eliminating quality loss—even under extreme 500× zoom conditions. With a target of reducing detail blur by up to 99.99%, this release redefines ultra-high resolution rendering through a carefully orchestrated pipeline of advanced image processing techniques.
 Key Enhancements:
