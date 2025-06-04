@@ -112,7 +112,7 @@ git clone https://github.com/Slizzurp/SlizzAi-2.5.git
 cd SlizzAi-2.5
 ```
 
-2️ **Install Dependencies**  
+ **Install Dependencies**  
 ```bash
 Here’s a streamlined installation guide for **SlizzAi v2.5** dependencies:  
 
