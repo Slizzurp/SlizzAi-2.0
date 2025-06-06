@@ -1,10 +1,10 @@
-# 🖼️ SlizzAi 2.5 – The Ultimate AI Imaging Framework 🚀🔥  
+# 🖼️ SlizzAi 2.6 – The Ultimate AI Imaging Framework 🚀🔥  
 
 ## 📌 Overview  
-SlizzAi 2.5 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**. Built with **NVIDIA OptiX integration, CUDA optimizations, and deep-learning refinement**, this tool **pushes AI-generated visuals beyond conventional limits**.  
+SlizzAi 2.6 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**. Built with **NVIDIA OptiX integration, CUDA optimizations, and deep-learning refinement**, this tool **pushes AI-generated visuals beyond conventional limits**.  
 
-SlizzAi-2.5.py - Version 2.5
-Release Date: 6/3/25
+SlizzAi-2.6.py - Version 2.6
+Release Date: 6/6/25
 
 ### **SlizzAi v2.5 Update Note**
 Our latest update for SlizzAi v2.5 introduces a groundbreaking suite of enhancements aimed at virtually eliminating quality loss—even under extreme 500× zoom conditions. With a target of reducing detail blur by up to 99.99%, this release redefines ultra-high resolution rendering through a carefully orchestrated pipeline of advanced image processing techniques.
@@ -159,8 +159,8 @@ SlizzAi-2.3 sets **a new benchmark for ultra-realistic, AI-driven scene generati
 ## ⚡ Installation & Setup  
  **Clone the Repository**  
 ```bash
-git clone https://github.com/Slizzurp/SlizzAi-2.5.git
-cd SlizzAi-2.5
+git clone https://github.com/Slizzurp/SlizzAi-2.6.git
+cd SlizzAi-2.6
 ```
 
  **Install Dependencies**  
@@ -198,29 +198,29 @@ Here’s a streamlined installation guide for **SlizzAi v2.5** dependencies:
    python slizzai_test.py  
    ```
 
-🚀 **Run SlizzAi 2.5**  
+🚀 **Run SlizzAi 2.6**  
 ```bash
-python slizzai-2.5.py
+python slizzai-2.6.py
 ```
 🛠️ How It Works
 - AI Command Control directs execution paths for fluid, adaptive transitions
 - Burst-Mode Processing rapidly unlocks modules for instant high-speed operations
 - Optimized CUDA Acceleration enables real-time multi-threaded rendering
 - OptiX AI Precision Refinement generates hyper-detailed textures and cinematic realism
-Built for SlizzAi v2.5, ensuring maximum efficiency and artistic excellence
+Built for SlizzAi v2.6, ensuring maximum efficiency and artistic excellence
 
 🎨 Customization & Expansion
 - Adjust ai_refinement.py for precise stylistic control, fine-tuning color grading, composition, and texture depth
 - Optimize cuda_processor.py to push ray-traced rendering speeds to peak efficiency
 - Extend benchmark_tests/ to rigorously validate performance across high-end GPUs and multi-threaded workloads
-Tailor SlizzAi v2.5 to match your vision with adaptive enhancements and cinematic precision.
+Tailor SlizzAi v2.6 to match your vision with adaptive enhancements and cinematic precision.
 
 ## 🔗 License & Credits  
-SlizzAi 2.5 is **MIT licensed**, designed for **AI research and creative development**.  
+SlizzAi 2.6 is **MIT licensed**, designed for **AI research and creative development**.  
 © 2025 SlizzAi Team – [GitHub Repository](https://github.com/Slizzurp/SlizzAi-2.0)  
 
 🔥 Welcome to the future of AI imaging! 🚀
-SlizzAi v2.5 isn’t just an evolution—it’s a revolution. With AI precision refinement, CUDA-powered speed, and cinematic depth, every frame is sculpted for unparalleled realism. Whether you’re crafting breathtaking landscapes or dynamic battle sequences, SlizzAi adapts to your vision with cutting-edge efficiency.
+SlizzAi v2.6 isn’t just an evolution—it’s a revolution. With AI precision refinement, CUDA-powered speed, and cinematic depth, every frame is sculpted for unparalleled realism. Whether you’re crafting breathtaking landscapes or dynamic battle sequences, SlizzAi adapts to your vision with cutting-edge efficiency.
 Push boundaries. Redefine artistry. SlizzAi is your canvas—paint the future.
 
 Let me know if you like the coding by following or liking posts on X @SlizzAi! 🚀🎨
