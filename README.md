@@ -1,4 +1,41 @@
 # 🖼️ SlizzAi 2.6 – The Ultimate AI Imaging Framework 🚀🔥  
+### **SlizzAi v2.6 – System Requirements**
+
+To ensure **smooth performance** and compatibility, **SlizzAi v2.6** requires the following:
+
+#### **Operating System**
+- **Windows 10 or 11 (64-bit)**
+- **Linux (Ubuntu 20.04+ or equivalent)**
+- **macOS 12+ (with Apple Silicon or Intel-based support)**
+
+#### **Hardware Requirements**
+- **Processor:** Intel i7 / AMD Ryzen 5 (or better)
+- **Memory:** Minimum **16GB RAM** (32GB recommended for high-performance workflows)
+- **GPU:** NVIDIA GeForce GTX 1060 (or newer), **RTX 3060 recommended** for CUDA acceleration
+- **Storage:** **SSD (Recommended)** with at least **20GB of free space** for image processing and temporary files
+- **Screen Resolution:** **1080p minimum**, preferably **1440p or 4K** for full clarity
+
+#### **Software Dependencies**
+- **Python 3.7+**
+- **Required Packages:**  
+  Install dependencies using:
+  ```bash
+  pip install opencv-python Pillow numpy torch openai tkinter customtkinter diffusers
+  ```
+- **PyTorch with CUDA Support** (for Windows users with NVIDIA GPUs)
+  - Install CUDA-compatible PyTorch:
+    ```bash
+    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+    ```
+- **Stable Diffusion Model (Optional, but Recommended)**
+  - Download model weights through Hugging Face or use built-in prompt-based image generation.
+
+#### **Additional Requirements**
+- **Internet Connection:** Required for OpenAI API calls (text-based chatbot functions).
+- **GPU Drivers:** Latest **NVIDIA CUDA Drivers** installed for optimal GPU acceleration.
+
+These requirements ensure **SlizzAi v2.6 operates efficiently** while delivering **high-end image generation and enhancement features**. Let me know if you need help setting anything up!
+
 
 ## 📌 Overview  
 SlizzAi 2.6 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**. Built with **NVIDIA OptiX integration, CUDA optimizations, and deep-learning refinement**, this tool **pushes AI-generated visuals beyond conventional limits**.  
