@@ -348,7 +348,7 @@ class SlizzAiApp(tk.Tk):
         else:
             new_height = canvas_height
             new_width = int(new_height * img_ratio)
-        resized = image.resize((new_width, new_height), Image.ANTIALIAS)
+        resized = image.resize((new_width, new_height))
         self.photo_image = ImageTk.PhotoImage(resized)
         self.canvas.delete("all")
         self.canvas.create_image(canvas_width // 2, canvas_height // 2, image=self.photo_image, anchor=tk.CENTER)
