@@ -45,10 +45,61 @@ Update 2.2 included the following:
 ✅ **Multi-Threaded CUDA Processing** – Ultra-fast image synthesis and optimization  
 ✅ **Fractal-Based Adaptive Shading** – Cinematic depth realism for immersive artistry  
 ✅ **Smart Styling Engine** – AI-driven artistic enhancements for refined compositions  
+```me
+# SlizzAi v2.6
 
-### **📌 README.md – SlizzAi 2.5**
-```md
-# 🖼️ Current update: SlizzAi 2.5 – The Ultimate AI Imaging Framework 🚀🔥  
+SlizzAi v2.6 is an AI-powered image enhancement and generation tool that combines advanced image processing techniques with a sleek, Windows 11–inspired chatbot interface built using Tkinter.
+
+## Features
+
+1. **Real-Time Neural Denoising** – Simulated NVIDIA OptiX AI denoising.
+2. **Multi-Pass Ray-Tracing Optimization** – Dynamic light interaction simulation.
+3. **Neural Style Transfer 2.0** – Enhanced multi-layer style transfers.
+4. **Quantum-Inspired Compression Models** – Efficient image compression techniques.
+5. **Hierarchical AI Texture Generation** – Layered texture synthesis for fine details.
+6. **AI-Powered Signature Branding** – Dynamic procedural watermarking.
+7. **Expanded Anime & Cyber-Fantasy Styles** – Unique aesthetic enhancements.
+8. **AI-Driven Narrative Scene Composition** – Recomposition for storytelling visuals.
+9. **AI-Powered Atmospheric Simulations** – Procedural fog and dynamic weather effects.
+10. **Hyper-Realistic AI Hair & Cloth Dynamics** – Advanced edge detection effects.
+11. **Advanced AI Motion Blur & Cinematic Framing** – Filmic image transitions.
+12. **AI-Assisted 3D Environment Generation** – Procedural scene building.
+13. **Real-Time Fractal Zoom Optimization** – Extreme detail enhancement.
+14. **Adaptive Temporal Filtering** – Smooth image transition effects.
+15. **Advanced Material Processing** – Enhanced surface texture rendering.
+16. **Neural HDR Enhancement** – Expanded dynamic range.
+17. **GPU-Based Image Processing** – Accelerated via PyTorch and CUDA.
+18. **AI-Powered Image Import/Export** – Copy, paste, load, and save image functionalities.
+19. **Integrated Chatbot Interface** – Interactive project creation.
+20. **Windows 11-Inspired GUI** – Modern, sleek design using Tkinter.
+
+## Installation
+
+1. Requires Python 3.7 or higher.
+2. Install dependencies:
+   ```bash
+   pip install opencv-python Pillow numpy torch openai
+   ```
+3. Run the application:
+   ```bash
+   python slizzaiv2_6.py
+   ```
+
+## Credits
+
+Developed by **Mirnes** and the SlizzAi Team.  
+This project uses libraries and tools from OpenAI, Nvidia, PyTorch, Tkinter, and more.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Repository
+
+For more details, contributions, and updates, visit the GitHub repository:  
+[https://github.com/Slizzurp/SlizzAi](https://github.com/Slizzurp/SlizzAi)
+```
+# 🖼️ Current update: SlizzAi 2.6 – The Ultimate AI Imaging Framework 🚀🔥  
 
 ## 📌 Overview  
 SlizzAi 2.5 is a cutting-edge **AI imaging framework**, designed for **hyper-realistic rendering, GPU-accelerated processing, and cinematic AI-driven artistry**.
