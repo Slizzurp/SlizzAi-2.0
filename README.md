@@ -1,11 +1,11 @@
-# 🖼️ SlizzAi 2.7 – The Ultimate AI Imaging Framework 🚀🔥  
-### **SlizzAi v2.7 – System Requirements**
+# 🖼️ SlizzAi 2.8 – The Ultimate AI Imaging Framework 🚀🔥  
+### **SlizzAi v2.8 – System Requirements**
 
 To ensure **smooth performance** and compatibility, **SlizzAi v2.7** requires the following:
-SlizzAi v2.7
+SlizzAi v2.8
 High-Fidelity AI-Driven Image Processing & Cinematic Rendering
 📌 Description
-SlizzAi v2.7 is an advanced AI-powered image enhancement and rendering tool, integrating cutting-edge techniques such as fractal zoom detailing, neural HDR enhancement, and adaptive shading to deliver ultra-realistic visuals. This version introduces super anti-aliasing, optimized GPU-based image processing, and refined procedural textures to elevate artistic quality.
+SlizzAi v2.8 is an advanced AI-powered image enhancement and rendering tool, integrating cutting-edge techniques such as fractal zoom detailing, neural HDR enhancement, and adaptive shading to deliver ultra-realistic visuals. This version introduces super anti-aliasing, optimized GPU-based image processing, and refined procedural textures to elevate artistic quality.
 With iterative refinement, SlizzAi v2.7 ensures seamless workflow integration for creators, enabling cinematic depth, dynamic lighting effects, and precision scaling—perfect for high-resolution renders and immersive storytelling.
 🚀 Features
 ✔ Fractal Zoom Detailing – Infinite scalability with natural depth
@@ -14,6 +14,25 @@ With iterative refinement, SlizzAi v2.7 ensures seamless workflow integration fo
 ✔ Procedural Texture Generation – AI-assisted material design
 ✔ Optimized GPU Acceleration – Performance boost via NVIDIA OptiX
 ✔ Customizable AI Prompt System – Fine-tune results for stylistic consistency
+
+Key Improvements:
+Sleek Dark Theme: All backgrounds, text, and widgets use dark gray, light dark gray, and accent blue for a modern, professional look.
+Simplified Structure: Duplicate and legacy code removed; all tabs and features are clearly separated and maintainable.
+Consistent Image Pipeline: All image effects return PIL images in RGB, ensuring compatibility and easy preview.
+Chatbot and Effects Integration: You can apply effects from both the chatbot and the Effects tab.
+Ready to Compile: Save as SlizzAi-2.8.py and run with Python 3.7+ and required libraries installed1.
+
+How to Run:
+Save the script as SlizzAi-2.8.py.
+
+Install dependencies:
+
+pip install opencv-python Pillow numpy tk
+
+Run:
+python SlizzAi-2.8.py
+
+This version is fully functional and visually modern, ready for further extension or packaging as an executable.
 
 #### **Operating System**
 - **Windows 10 or 11 (64-bit)**
@@ -98,13 +117,13 @@ Update 2.2 included the following:
 ```me
 ---
 
-# SlizzAi v2.7  
+# SlizzAi v2.8  
 ### High-Fidelity AI-Driven Image Processing & Cinematic Rendering
 
 ## 📌 Description  
-SlizzAi v2.7 is an advanced AI-powered image enhancement and rendering tool, integrating cutting-edge techniques such as **fractal zoom detailing, neural HDR enhancement, and adaptive shading** to deliver ultra-realistic visuals. This version introduces **super anti-aliasing**, optimized **GPU-based image processing**, and refined **procedural textures** to elevate artistic quality.
+SlizzAi v2.8 is an advanced AI-powered image enhancement and rendering tool, integrating cutting-edge techniques such as **fractal zoom detailing, neural HDR enhancement, and adaptive shading** to deliver ultra-realistic visuals. This version introduces **super anti-aliasing**, optimized **GPU-based image processing**, and refined **procedural textures** to elevate artistic quality.
 
-With **iterative refinement**, SlizzAi v2.7 ensures seamless workflow integration for creators, enabling cinematic depth, **dynamic lighting effects**, and **precision scaling**—perfect for high-resolution renders and immersive storytelling.
+With **iterative refinement**, SlizzAi v2.8 ensures seamless workflow integration for creators, enabling cinematic depth, **dynamic lighting effects**, and **precision scaling**—perfect for high-resolution renders and immersive storytelling.
 
 ## 🚀 Features  
 ✔ **Fractal Zoom Detailing** – Infinite scalability with natural depth  
@@ -117,8 +136,8 @@ With **iterative refinement**, SlizzAi v2.7 ensures seamless workflow integratio
 ## 📦 Installation Guide  
 1️⃣ **Clone Repository:**  
 ```bash
-git clone https://github.com/your-repo/SlizzAi-v2.7.git
-cd SlizzAi-v2.7
+git clone https://github.com/your-repo/SlizzAi-v2.8.git
+cd SlizzAi-v2.8
 ```
 2️⃣ **Install Dependencies:**  
 ```bash
@@ -152,7 +171,7 @@ python slizzai.py
 - Burst-Mode Processing rapidly unlocks modules for instant high-speed operations
 - Optimized CUDA Acceleration enables real-time multi-threaded rendering
 - OptiX AI Precision Refinement generates hyper-detailed textures and cinematic realism
-Built for SlizzAi v2.7, ensuring maximum efficiency and artistic excellence
+Built for SlizzAi v2.8, ensuring maximum efficiency and artistic excellence
 
 🎨 Customization & Expansion
 - Adjust ai_refinement.py for precise stylistic control, fine-tuning color grading, composition, and texture depth
@@ -161,11 +180,11 @@ Built for SlizzAi v2.7, ensuring maximum efficiency and artistic excellence
 Tailor SlizzAi v2.6 to match your vision with adaptive enhancements and cinematic precision.
 
 ## 🔗 License & Credits  
-SlizzAi 2.7 is **MIT licensed**, designed for **AI research and creative development**.  
+SlizzAi 2.8 is **MIT licensed**, designed for **AI research and creative development**.  
 © 2025 SlizzAi Team – [GitHub Repository](https://github.com/Slizzurp/SlizzAi-2.0)  
 
 🔥 Welcome to the future of AI imaging! 🚀
-SlizzAi v2.7 isn’t just an evolution—it’s a revolution. With AI precision refinement, CUDA-powered speed, and cinematic depth, every frame is sculpted for unparalleled realism. Whether you’re crafting breathtaking landscapes or dynamic battle sequences, SlizzAi adapts to your vision with cutting-edge efficiency.
+SlizzAi v2.8 isn’t just an evolution—it’s a revolution. With AI precision refinement, CUDA-powered speed, and cinematic depth, every frame is sculpted for unparalleled realism. Whether you’re crafting breathtaking landscapes or dynamic battle sequences, SlizzAi adapts to your vision with cutting-edge efficiency.
 Push boundaries. Redefine artistry. SlizzAi is your canvas—paint the future.
 
 Let me know if you like the coding by following or liking posts on X @SlizzAi! 🚀🎨
